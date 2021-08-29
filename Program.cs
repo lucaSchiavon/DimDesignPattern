@@ -72,12 +72,26 @@ namespace DesignPatternDimitri
             //.(.....)
 
             //builder as a parameter
-            var ms = new MailService();
-            ms.SendEmail(BuildEmail);
+            //var ms = new MailService();
+            //ms.SendEmail(BuildEmail);
             //qui passa un builder sottoforma di delegate che costruisce la mail
             //la vera costruzione dell'email avverrà però quando il delegate verrà invocato
             //dentro send mail
-             ms.SendEmail(email => email.From("foo@bar.com"));
+            // ms.SendEmail(email => email.From("foo@bar.com"));
+
+
+
+            //var pb = new DesignPatternDimitri.Creazionali.Builder.Inheritance.PersonJobBuilder();
+            //pb.Called("Antonio")
+            //  //.WorksAsA("Antonio") non compila a causa dell'eredità
+            //  .Build();
+
+            var me = DesignPatternDimitri.Creazionali.Builder.Inheritance.Soluzione.Person.New
+                .Born(DateTime.Now)
+                .Called("Antonio")
+                .WorksAsA("Employee");
+               
+
 
             //var apple = new Product("Apple", Color.Green, Size.Small);
             //var tree = new Product("Tree", Color.Green, Size.Large);
@@ -205,6 +219,8 @@ namespace DesignPatternDimitri
             //int a = 3;
             //Db db = Db.Instance;
             //Db db2 = Db.Instance;
+
+           
 
             Console.ReadLine();
         }
