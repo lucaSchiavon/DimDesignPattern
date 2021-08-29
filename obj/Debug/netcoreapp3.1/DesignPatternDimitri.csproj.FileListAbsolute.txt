@@ -11,3 +11,16 @@ D:\L_SCHIAVON_DOCUMENTS\LAVORO\NOGIT\DesignPatternDimitri\obj\Debug\netcoreapp3.
 D:\L_SCHIAVON_DOCUMENTS\LAVORO\NOGIT\DesignPatternDimitri\obj\Debug\netcoreapp3.1\DesignPatternDimitri.dll
 D:\L_SCHIAVON_DOCUMENTS\LAVORO\NOGIT\DesignPatternDimitri\obj\Debug\netcoreapp3.1\DesignPatternDimitri.pdb
 D:\L_SCHIAVON_DOCUMENTS\LAVORO\NOGIT\DesignPatternDimitri\obj\Debug\netcoreapp3.1\DesignPatternDimitri.genruntimeconfig.cache
+D:\L_SCHIAVON_DOCUMENTS\LAVORO\GIT\DimDesignPattern\bin\Debug\netcoreapp3.1\DesignPatternDimitri.exe
+D:\L_SCHIAVON_DOCUMENTS\LAVORO\GIT\DimDesignPattern\bin\Debug\netcoreapp3.1\DesignPatternDimitri.deps.json
+D:\L_SCHIAVON_DOCUMENTS\LAVORO\GIT\DimDesignPattern\bin\Debug\netcoreapp3.1\DesignPatternDimitri.runtimeconfig.json
+D:\L_SCHIAVON_DOCUMENTS\LAVORO\GIT\DimDesignPattern\bin\Debug\netcoreapp3.1\DesignPatternDimitri.runtimeconfig.dev.json
+D:\L_SCHIAVON_DOCUMENTS\LAVORO\GIT\DimDesignPattern\bin\Debug\netcoreapp3.1\DesignPatternDimitri.dll
+D:\L_SCHIAVON_DOCUMENTS\LAVORO\GIT\DimDesignPattern\bin\Debug\netcoreapp3.1\DesignPatternDimitri.pdb
+D:\L_SCHIAVON_DOCUMENTS\LAVORO\GIT\DimDesignPattern\obj\Debug\netcoreapp3.1\DesignPatternDimitri.csprojAssemblyReference.cache
+D:\L_SCHIAVON_DOCUMENTS\LAVORO\GIT\DimDesignPattern\obj\Debug\netcoreapp3.1\DesignPatternDimitri.AssemblyInfoInputs.cache
+D:\L_SCHIAVON_DOCUMENTS\LAVORO\GIT\DimDesignPattern\obj\Debug\netcoreapp3.1\DesignPatternDimitri.AssemblyInfo.cs
+D:\L_SCHIAVON_DOCUMENTS\LAVORO\GIT\DimDesignPattern\obj\Debug\netcoreapp3.1\DesignPatternDimitri.csproj.CoreCompileInputs.cache
+D:\L_SCHIAVON_DOCUMENTS\LAVORO\GIT\DimDesignPattern\obj\Debug\netcoreapp3.1\DesignPatternDimitri.dll
+D:\L_SCHIAVON_DOCUMENTS\LAVORO\GIT\DimDesignPattern\obj\Debug\netcoreapp3.1\DesignPatternDimitri.pdb
+D:\L_SCHIAVON_DOCUMENTS\LAVORO\GIT\DimDesignPattern\obj\Debug\netcoreapp3.1\DesignPatternDimitri.genruntimeconfig.cache

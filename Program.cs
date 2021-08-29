@@ -1,4 +1,5 @@
 ﻿using DesignPatternDimitri.Creazionali.Builder;
+using DesignPatternDimitri.Creazionali.Singleton;
 using DesignPatternDimitri.DepInvPrinciple;
 using DesignPatternDimitri.OPC;
 using DesignPatternDimitri.Strutturali.Adapter;
@@ -9,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Xml.Serialization;
 
 namespace DesignPatternDimitri
@@ -70,12 +72,12 @@ namespace DesignPatternDimitri
             //.(.....)
 
             //builder as a parameter
-            //var ms = new MailService();
-            //ms.SendEmail(BuildEmail);
+            var ms = new MailService();
+            ms.SendEmail(BuildEmail);
             //qui passa un builder sottoforma di delegate che costruisce la mail
             //la vera costruzione dell'email avverrà però quando il delegate verrà invocato
             //dentro send mail
-            // ms.SendEmail(email => email.From("foo@bar.com"));
+             ms.SendEmail(email => email.From("foo@bar.com"));
 
             //var apple = new Product("Apple", Color.Green, Size.Small);
             //var tree = new Product("Tree", Color.Green, Size.Large);
@@ -151,16 +153,58 @@ namespace DesignPatternDimitri
             //layer2.ConnectTo(neuron1);
             //layer1.ConnectTo(layer2);
 
-            var neuron1 = new  Neuron();
-            var neuron2 = new Neuron();
-            //Ienumerable è una interfaccia e va istanziata con un tipo concreto
-            IEnumerable<Neuron> layer1 = new List<Neuron>() { new Neuron() , new Neuron()};
-            IEnumerable<Neuron> layer2 = new List<Neuron>() { new Neuron(), new Neuron() };
+            //var neuron1 = new  Neuron();
+            //var neuron2 = new Neuron();
+            ////Ienumerable è una interfaccia e va istanziata con un tipo concreto
+            //IEnumerable<Neuron> layer1 = new List<Neuron>() { new Neuron() , new Neuron()};
+            //IEnumerable<Neuron> layer2 = new List<Neuron>() { new Neuron(), new Neuron() };
 
-            neuron1.ConnectTo(neuron2);
-            neuron1.ConnectTo(layer1);
-            layer2.ConnectTo(neuron1);
-            layer1.ConnectTo(layer2);
+            //neuron1.ConnectTo(neuron2);
+            //neuron1.ConnectTo(layer1);
+            //layer2.ConnectTo(neuron1);
+            //layer1.ConnectTo(layer2);
+
+            //singleton
+            //Database db = Database.Instance;
+
+
+
+            // Type type = typeof(Addition);
+            // ConstructorInfo ctor = type.GetConstructor(new[] { typeof(int) });
+            // object instance = ctor.Invoke(new object[] { 10 });
+
+            //var e= ((Addition)instance).Add(3 ,5);
+
+            //Type type = typeof(Cache);
+
+            //ConstructorInfo ctor = type.GetConstructor()
+            //object instance = ctor.Invoke(new object[] { 10 });
+
+            //var e = ((Addition)instance).Add(3, 5);
+
+            //Cache instance = Activator.CreateInstance<Cache>();
+
+            Type type = typeof(Cache);
+            Cache instance =(Cache) Activator.CreateInstance(type, true);
+
+
+            //Addition instance2 = Activator.CreateInstance<Addition>();
+
+            //Assembly assem1 = typeof(Addition).Assembly;
+            //Addition p1 = (Addition)assem1.CreateInstance("DesignPatternDimitri.Creazionali.Singleton.Addition");
+
+            //Assembly assem = typeof(Cache).Assembly;
+            //Cache p = (Cache)assem.CreateInstance("DesignPatternDimitri.Creazionali.Singleton.Cache");
+
+            //var singleton = typeof(Cache).GetProperty("Instance").GetValue(null);
+
+            //var a = 3;
+            //var c = Globals.Cache;
+            //var c1 = Globals.Cache;
+            //var c2 = Globals.Cache2;
+            //int a = 3;
+            //Db db = Db.Instance;
+            //Db db2 = Db.Instance;
 
             Console.ReadLine();
         }

@@ -31,10 +31,10 @@ namespace DesignPatternDimitri.Creazionali.Builder
         
         }
 
-        public void SendEmail(Action<EmailBuilder> builder)
+        public void SendEmail(Action<EmailBuilder> buildEmail)
         {
             var email = new Email();
-            builder(new EmailBuilder(email)); //invoke delegate
+            buildEmail(new EmailBuilder(email)); //invoke delegate
             SendEmailInternal(email);
         }
     }
