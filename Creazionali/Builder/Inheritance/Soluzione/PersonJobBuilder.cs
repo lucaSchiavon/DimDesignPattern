@@ -11,7 +11,8 @@ namespace DesignPatternDimitri.Creazionali.Builder.Inheritance.Soluzione
         public SELF WorksAsA(string position)
         {
             person.Position = position;
-            return (SELF)this;
+            SELF a = (SELF)this;
+            return a;
         }
     }
 }
