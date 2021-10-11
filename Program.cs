@@ -10,6 +10,7 @@ using DesignPatternDimitri.Strutturali.Composite;
 using DesignPatternDimitri.Strutturali.Composite.NeuronExample;
 using DesignPatternDimitri.Strutturali.Flyweight.TextFormatting;
 using DesignPatternDimitri.Strutturali.Proxy;
+using CompositeCommand = DesignPatternDimitri.Comportamentali.Command.CompositeCommand;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -293,15 +294,23 @@ namespace DesignPatternDimitri
             //}
 
             //COMMAND
-            var ba = new BankAccount();
-            var cmdDeposit = new BankAccountCommand(ba, BankAccountCommand.Action.Deposit, 100);       
-            var cmdWithdraw = new BankAccountCommand(ba, BankAccountCommand.Action.Withdraw,50);
-            cmdDeposit.Call();
-            cmdWithdraw.Call();
-            Console.WriteLine(ba);
-            cmdWithdraw.Undo();
-            cmdDeposit.Undo();
-                Console.WriteLine(ba);
+            //var ba = new BankAccount();
+            //var cmdDeposit = new BankAccountCommand(ba, BankAccountCommand.Action.Deposit, 100);       
+            //var cmdWithdraw = new BankAccountCommand(ba, BankAccountCommand.Action.Withdraw,50);
+            //cmdDeposit.Call();
+            //cmdWithdraw.Call();
+            //Console.WriteLine(ba);
+            //cmdWithdraw.Undo();
+            //cmdDeposit.Undo();
+            //    Console.WriteLine(ba);
+
+            var from = new CompositeCommand.BankAccount();
+            from.Deposit(100);
+            var to = new CompositeCommand.BankAccount();
+            var mtc = new CompositeCommand.MoneyTransfertCommand(from, to, 1000);
+            mtc.Call();
+            Console.WriteLine(from);
+            Console.WriteLine(to);
 
             Console.ReadLine();
         }
